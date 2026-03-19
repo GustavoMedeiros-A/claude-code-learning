@@ -36,7 +36,6 @@ export const workouts = pgTable(
         startedAt: timestamp("started_at", { withTimezone: true }).notNull().defaultNow(),
         completedAt: timestamp("completed_at", { withTimezone: true }),
         createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-        updatedAt: timestamp("updated_at").notNull().defaultNow().$onUpdate(() => new Date())
     },
     (table) => [
         index("workouts_user_id_idx").on(table.userId),
@@ -57,7 +56,6 @@ export const workoutExercises = pgTable(
         order: integer("order").notNull(),
         notes: text("notes"),
         createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-        updatedAt: timestamp("updated_at").notNull().defaultNow().$onUpdate(() => new Date())
     },
     (table) => [index("workout_exercises_workout_id_idx").on(table.workoutId)]
 );
