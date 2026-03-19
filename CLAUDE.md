@@ -4,8 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## IMPORTANT: Documentation First
 
-**Before generating any code, Claude Code MUST first check the `/docs` directory for relevant documentation files.** All implementation decisions should align with the guidance found there. If a relevant docs file exists for the feature or technology being worked on, follow it before writing any code.
+**Before generating any code, Claude Code MUST first check the `/docs` directory for relevant documentation files.** All implementation decisions should align with the guidance found there. If a relevant docs file exists for the feature or technology being worked on, follow it before writing any code: 
+
 - /docs/ui.md
+- /docs/data-fetching.md
 
 
 ## Commands
