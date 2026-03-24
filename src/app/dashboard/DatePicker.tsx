@@ -20,6 +20,7 @@ export function DatePicker({ selected }: { selected: Date }) {
     if (!d) return;
     setOpen(false);
     router.push(`/dashboard?date=${format(d, "yyyy-MM-dd")}`);
+    router.refresh();
   }
 
   return (
