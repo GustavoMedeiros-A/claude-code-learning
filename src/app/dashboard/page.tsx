@@ -1,7 +1,9 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { format } from "date-fns";
+import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { getWorkoutsForUserByDate } from "@/data/workouts";
 import { DatePicker } from "./DatePicker";
 
@@ -68,7 +70,12 @@ export default async function DashboardPage({
 
   return (
     <div className="max-w-2xl mx-auto p-6 space-y-6">
-      <h1 className="text-2xl font-bold">Dashboard</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <Button asChild>
+          <Link href="/dashboard/workout/new">+ New Workout</Link>
+        </Button>
+      </div>
 
       <div className="flex items-center gap-2">
         <span className="text-sm font-medium">Viewing workouts for:</span>

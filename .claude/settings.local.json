@@ -13,7 +13,8 @@
       "Bash(git config:*)",
       "Read(//home/medeiros/.config/git/**)",
       "Read(//home/medeiros/**)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   },
   "enabledMcpjsonServers": [

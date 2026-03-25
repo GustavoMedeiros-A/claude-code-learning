@@ -35,3 +35,11 @@ export async function getWorkoutsForUserByDate(userId: string, date: Date) {
 
   return rows;
 }
+
+export async function createWorkout(userId: string, name: string, date: Date) {
+  const [workout] = await db
+    .insert(workouts)
+    .values({ userId, name, startedAt: date })
+    .returning();
+  return workout;
+}
